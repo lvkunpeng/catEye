@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" @keydown.enter="fn">
+</div>
+<script src="vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        methods:{
+            fn(){
+                alert('hello')
+            },
+            fn2(){
+                alert('123')
+            }
+        }
+    })
+
+
+</script>
+</body>
+</html>

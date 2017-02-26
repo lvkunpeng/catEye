@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div v-border="msg">我是一个蓝色的盒子</div>
+
+</div>
+<script src="vue-resource.js"></script>
+<script src="vue/dist/vue.js"></script>
+<script>
+    Vue.directive('border',function (el,binding) {
+        console.log(binding);
+       el.style.border ='1px solid'+ binding.value;
+    });
+    var vm  = new Vue({
+        el:'#app',
+        data:{
+            msg:'red'
+        }
+    })
+    //自定义过滤器：
+
+
+
+</script>
+</body>
+</html>

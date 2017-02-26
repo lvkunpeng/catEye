@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">haha
+    <button @click="getUser"></button>
+    <button @click="postUser">post</button>
+    <button @click="getData">获取百度数据</button>
+</div>
+<script src="vue/dist/vue.js"></script>
+<script src="vue-resource.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:''
+        },
+        methods:{
+            getUser(){
+                this.$http.get('/getUser').then(function (res) {
+                    console.log(res.body)
+                })
+            },
+            postUser(){
+                this.$http.post('/postUser',{name:'zfpx'}).then(function (data) {
+                    console.log(data)
+                })
+            },
+            getData(){
+                this.$http.jsonp('https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',{
+                    params:{
+                        wd:'c',
+                    },
+                    jsonp:'cb'
+                }).then(function (res) {
+                    console.log(res)
+                })
+            }
+        }
+    })
+
+
+
+</script>
+</body>
+</html>

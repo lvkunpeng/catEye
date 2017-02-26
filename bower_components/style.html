@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .back {
+            background-color: blue;
+        }
+
+        .color {
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <div :style="{background:'green'}">zfpx</div>
+    <div :style="[a]">zfpx</div>
+</div>
+<script src="vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            a:{fontSize:'100px'},
+            flag: false,
+        }
+    })
+
+
+</script>
+</body>
+</html>

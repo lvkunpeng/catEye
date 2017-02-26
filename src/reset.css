@@ -1,0 +1,24 @@
+a{
+    text-decoration:none;
+    color: #676767;
+}
+a:hover,a:visited{
+    color: #676767;
+}
+body{
+    margin: 0;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    font-weight: normal;
+    font-size: 12px;
+}
+p{
+    margin: 0;
+    font-size: 12px;
+}

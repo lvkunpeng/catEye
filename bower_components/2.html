@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div @click="fn">out
+        <div @click.stop="fn">in</div>
+    </div>
+    <a href="www.baidu.com" @click.prevent="fn2">baidu </a>
+</div>
+<script src="vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        methods:{
+            fn(e){
+                alert('hello')
+            },
+            fn2(){
+                alert('123')
+            }
+        }
+    })
+
+
+</script>
+</body>
+</html>

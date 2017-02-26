@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+</head>
+<body>
+<div id="app">
+    <input type="text" @keydown.f1='up'>
+</div>
+<script src="vue-resource.js"></script>
+<script src="vue/dist/vue.js"></script>
+<script>
+    Vue.config.keyCodes.f1 = 13;
+    //自定义键盘事件
+    var vm = new Vue({
+        el: '#app',
+        data: {
+        },
+        methods: {
+            up:function () {
+                alert('ok')
+            }
+        }
+    })
+
+
+</script>
+</body>
